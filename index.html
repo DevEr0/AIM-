@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="hy">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/hero-style.css">
+    <link rel="stylesheet" href="css/progress-style.css">
+    <link rel="stylesheet" href="css/advantages-style.css">
+    <link rel="stylesheet" href="css/team-style.css">
+    <link rel="stylesheet" href="css/testimonials-style.css">
+    <link rel="stylesheet" href="css/contact-style.css">
+    <link rel="stylesheet" href="css/footer-style.css">
+    <link rel="stylesheet" href="css/services-style.css">
+    <link rel="stylesheet" href="css/toggle.css">
+    <script src="js/nav.js"></script>
+    <title>AIM Creative Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+     .marquee-section {
+      overflow: hidden;
+      background: #f5f5f5;
+      padding: 20px 0;
+    }
+
+    .marquee {
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      width: max-content;
+      animation: marquee 20s linear infinite;
+    }
+
+    .marquee img {
+      width: 150px;           /* fixed box width */
+      height: 100px;          /* fixed box height */
+      object-fit: contain;    /* keep proportions inside the box */
+      margin: 0 20px;         /* more spacing looks cleaner */
+      border-radius: 8px;
+      /*background: white;      /* makes transparent logos readable */
+      padding: 10px;          /* adds breathing room inside box */
+     /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional polish */
+    }
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <header>
+          <div class="nav">
+            <div class="brand">
+              <div class="title">
+                <img src="images/Logo_Text.png" alt="Logo">
+              </div>
+            </div>
+            <button class="hamburger" aria-label="Toggle Menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+            <nav aria-label="primary">
+              <ul class="nav-links">
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="about.html">Մեր Մասին</a></li>
+                <li><a href="portfolio.html">Պորտֆոլիո</a></li>
+                <li><a href="services.html">Ծառայություններ</a></li>
+                <li><a class="cta" href="#contact">Կապ մեզ հետ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="left">
+            <h1>Թվային մարքեթինգ, որը բերում է իրական արդյունքներ</h1>
+            <p class="lead">Մենք ստեղծում ենք թվային լուծումներ, որոնք օգնում են ձեր բիզնեսին ավելի արագ աճել և դառնալ տեսանելի բրենդ</p>
+            <div class="actions">
+              <a class="btn white" href="#contact">Անվճար խորհրդատվություն</a>
+              <a class="btn ghost" href="services.html">Իմանալ ավելին</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-section">
+        <div class="marquee">
+          <img src="images/Podcast_logo.png" alt="Sample Image 1">
+          <img src="images/cadproof_logo.png" alt="Sample Image 2">
+          <img src="images/GoShuka_logo.png" alt="Sample Image 3">
+          <img src="images/door_delivery_logo.png" alt="Sample Image 4">
+          <img src="images/broast_bites_logo.png" alt="Sample Image 5">
+          <img src="images/creme_logo.png" alt="Sample Image 6">
+          <img src="images/Pizzanini_logo.png" alt="Sample Image 7">
+          <img src="images/tex_me_logo.png" alt="Sample Image 8">
+          <!-- Duplicate images to create seamless loop -->
+          <img src="images/Podcast_logo.png" alt="Sample Image 1">
+          <img src="images/cadproof_logo.png" alt="Sample Image 2">
+          <img src="images/GoShuka_logo.png" alt="Sample Image 3">
+          <img src="images/door_delivery_logo.png" alt="Sample Image 4">
+          <img src="images/broast_bites_logo.png" alt="Sample Image 5">
+          <img src="images/creme_logo.png" alt="Sample Image 6">
+          <img src="images/Pizzanini_logo.png" alt="Sample Image 7">
+          <img src="images/tex_me_logo.png" alt="Sample Image 8">
+        </div>
+      </section>
+
+
+      <section id="services" class="services container fade">
+        <h1 class="section-title">Ծառայություններ</h1>
+        <div class="services-grid">
+            <div class="service">
+                <img class="service-icon" src="images/Branding_icon.png" alt="Branding Icon">
+                <div class="service-content">
+                    <h4>Branding</h4>
+                    <p>Մենք ստեղծում ենք ձեր բրենդի ինքնությունը՝ գաղափարից մինչև տեսողական լուծումներ, որպեսզի ձեր բիզնեսը ունենա ճանաչելի և վստահելի կերպար շուկայում։</p>
+                </div>
+                <a class="service-link" href="services.html"> <!-- Add your actual link here -->
+                    <img class="service-icon-new" src="images/learn_more_icon.png" alt="Learn More Icon">
+                    <span class="learn-more-text">Իմանալ ավելին</span>
+                </a>
+            </div>
+            <div class="service">
+                <img class="service-icon" src="images/Procution_icon.png" alt="Photo Video Icon">
+                <div class="service-content">
+                    <h4>Photo and Video Production</h4>
+                    <p>Ստեղծում ենք բարձրորակ լուսանկարներ և տեսանյութեր, որոնք պատմում են ձեր բրենդի պատմությունը և խթանում հաճախորդի հետաքրքրությունը։</p>
+                </div>
+                <a class="service-link" href="services.html"> <!-- Add your actual link here -->
+                    <img class="service-icon-new" src="images/learn_more_icon.png" alt="Learn More Icon">
+                    <span class="learn-more-text">Իմանալ ավելին</span>
+                </a>
+            </div>
+            <div class="service">
+                <img class="service-icon" src="images/SMM_icon.png" alt="Business Marketing Icon">
+                <div class="service-content">
+                    <h4>SMM</h4>
+                    <p>Սոցիալական մեդիայի ռազմավարական կառավարումով բարձրացնում ենք ձեր բրենդի տեսանելիությունն ու ներգրավվածությունը, վերածելով հետևորդներին իրական հաճախորդների։</p>
+                </div>
+                <a class="service-link" href="services.html"> <!-- Add your actual link here -->
+                    <img class="service-icon-new" src="images/learn_more_icon.png" alt="Learn More Icon">
+                    <span class="learn-more-text">Իմանալ ավելին</span>
+                </a>
+            </div>
+            <div class="service">
+                <img class="service-icon" src="images/Event_Icon.png" alt="Event Marketing Icon">
+                <div class="service-content">
+                    <h4>Event Marketing</h4>
+                    <p>Կազմակերպում ենք միջոցառումներ, որոնք ձեր բրենդին հնարավորություն են տալիս անմիջական կապ ստեղծել լսարանի հետ և ամրապնդել վստահությունը։</p>
+                </div>
+                <a class="service-link" href="services.html"> <!-- Add your actual link here -->
+                    <img class="service-icon-new" src="images/learn_more_icon.png" alt="Learn More Icon">
+                    <span class="learn-more-text">Իմանալ ավելին</span>
+                </a>
+            </div>
+            <div class="service">
+                <img class="service-icon" src="images/Digital_icon.png" alt="Digital Marketing Icon">
+                <div class="service-content">
+                    <h4>Digital Marketing</h4>
+                    <p>Մեր թվային մարքեթինգային գործիքների համակցված լուծումները ապահովում են ձեր բիզնեսի կայուն աճը՝ մեծացնելով ինչպես վաճառքները, այնպես էլ վստահությունը։</p>
+                </div>
+                <a class="service-link" href="services.html"> <!-- Add your actual link here -->
+                    <img class="service-icon-new" src="images/learn_more_icon.png" alt="Learn More Icon">
+                    <span class="learn-more-text">Իմանալ ավելին</span>
+                </a>
+            </div>
+            <div class="service">
+                <img class="service-icon" src="images/Web_icon.png" alt="Web Development Icon">
+                <div class="service-content">
+                    <h4>Web Development</h4>
+                    <p>Մշակում ենք ժամանակակից և արդյունավետ կայքեր, որոնք դառնում են ձեր բիզնեսի գլխավոր գործիքը հաճախորդների գրավման և պահպանման համար։</p>
+                </div>
+                <a class="service-link" href="services.html"> <!-- Add your actual link here -->
+                    <img class="service-icon-new" src="images/learn_more_icon.png" alt="Learn More Icon">
+                    <span class="learn-more-text">Իմանալ ավելին</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="progress-container fade-in">
+      <div class="progress-text">
+        <h1>Հաջողված օրինակներ</h1>
+      </div>
+      <div class="progress-cards-wrapper">
+        <div class="progress-card">
+          <img class="progress-logo" src="images/Pizzanini_logo.png" alt="Logo 1">
+          <div class="progress-circle" data-percent="40">
+            <div class="progress-inner-circle">0%</div>
+          </div>
+          <p class="progress-description"><i class="fas fa-chart-line"></i> Էջերում ներգրավվածության 40%-աճ՝ ընդամենը 1 ամսում</p>
+        </div>
+        <div class="progress-card">
+          <img class="progress-logo" src="images/Podcast_logo.png" alt="Logo 2">
+          <div class="progress-circle" data-percent="100">
+            <div class="progress-inner-circle">0%</div>
+          </div>
+          <p class="progress-description"><i class="fas fa-eye"></i> Էջերում 60.000 դիտում 2 ամսում 0 դրամով</p>
+        </div>
+        <div class="progress-card">
+          <img class="progress-logo" src="images/door_delivery_logo.png" alt="Logo 3">
+          <div class="progress-circle" data-percent="30">
+            <div class="progress-inner-circle">0%</div>
+          </div>
+          <p class="progress-description"><i class="fas fa-shopping-cart"></i> Վաճառքների 30% աճ՝ 2 ամսվա ընթացքում</p>
+        </div>
+      </div>
+    </section>
+
+      <section class="advantages-section fade-in">
+        <div class="header">
+          <div class="header-content">
+            <h1 class="advantages-title">ՄՐՑԱԿՑԱՅԻՆ ԱՌԱՎԵԼՈՒԹՅՈՒՆՆԵՐԸ</h1>
+            <p class="advantages-subtitle">Ինչո՞ւ ընտրել մեզ՝ ձեր բիզնեսի հաջողության համար</p>
+          </div>
+        </div>
+        <div class="advantages-container">
+          <div class="advantage-box">
+            <h3 class="advantage-heading">ԱՐԴՅՈՒՆՔՆԵՐԻ ԱՊԱՀՈՎՈՒՄ</h3>
+            <p class="advantage-text">Մեր ռազմավարությունները նախագծված են տեսանելի եւ չափելի արդյունքների հասնելու համար։</p>
+          </div>
+          <div class="advantage-box">
+            <h3 class="advantage-heading">ՍՈՑԻԱԼԱԿԱՆ ԱՋԱԿՑՈՒԹՅՈՒՆ</h3>
+            <p class="advantage-text">Ձեր բիզնեսի հետ համագործակցության շնորհիվ մենք տրամադրում ենք անվճար մարքեթինգային ծառայություններ հայանպաստ նախագծերին՝ ձեր հաջողությունը դարձնելով նաեւ մեր երկրի բարօրության մաս։</p>
+          </div>
+          <div class="advantage-box">
+            <h3 class="advantage-heading">ՓՈՐՁԱՌՈՒ ԹԻՄ</h3>
+            <p class="advantage-text">Մեր թիմը ունենալով տարիների փորձ տիրապետում է ժամանակակից մասնագիտական գործիքներին եւ մոտեցումներին։</p>
+          </div>
+        </div>
+        <p class="advantages-quote">"Հաջողությունը բերում են նրանք, ովքեր ընտրում են լավագույն լուծումները"</p>
+      </section>
+
+      <section class="contact-form-section fade-in">
+        <h2 class="contact-title">Կապ մեզ հետ</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Անուն Ազգանուն</label>
+            <input type="text" id="name" placeholder="Սահակ Պարթև" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Էլ․ հասցե</label>
+            <input type="email" id="email" placeholder="Example@gmail.com" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Նամակ</label>
+            <textarea id="message" placeholder="Ձեր Հաղորդագրությունը" class="form-textarea" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Ուղարկել</button>
+        </form>
+      </section>
+
+      <footer class="footer-section">
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <img src="images/Logo_Text_White.png" alt="Logo" class="logo-image">
+            </div>
+            <div class="footer-contact">
+              <h2 class="footer-contact-bold">Բաժանորդագրվել</h2>
+              <h2>Հետևեք մեր ամենաթարմ հաջողություններին</h2>
+              <div class="footer-newsletter">
+                <h3>Եղեք տեղեկացված</h3>
+                <form>
+                  <input type="email" placeholder="Էլ․ հասցե" required>
+                  <button type="submit">բաժանորդագրվել</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="footer-social">
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Combined and cleaned up script (removed duplicates, added progress animation, removed unused radial draw)
+    
+      // Fade-in Effect for .fade-in
+      document.addEventListener('DOMContentLoaded', () => {
+        const fadeInObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              fadeInObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+    
+        document.querySelectorAll('.fade-in').forEach(el => fadeInObserver.observe(el));
+      });
+    
+      // Reveal on scroll for .fade (adds .show)
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+    
+      document.querySelectorAll('.fade').forEach(el => fadeObserver.observe(el));
+    
+      // Progress circle animation on scroll
+      const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const circle = entry.target.querySelector('.progress-circle');
+            const inner = circle.querySelector('.progress-inner-circle');
+            const targetPercent = parseInt(circle.dataset.percent, 10);
+            let currentPercent = 0;
+            const duration = 2000; // Animation duration in ms
+            const startTime = performance.now();
+    
+            inner.textContent = '0%'; // Reset text to 0% at start of animation
+    
+            const animate = (time) => {
+              const elapsed = time - startTime;
+              currentPercent = Math.min((elapsed / duration) * targetPercent, targetPercent);
+              circle.style.setProperty('--progress', currentPercent);
+              inner.textContent = Math.round(currentPercent) + '%';
+    
+              if (elapsed < duration) {
+                requestAnimationFrame(animate);
+              }
+            };
+    
+            requestAnimationFrame(animate);
+            progressObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 }); // Trigger when 50% of the card is visible
+    
+      document.querySelectorAll('.progress-card').forEach(card => progressObserver.observe(card));
+    
+      // Simple form handling
+      function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        alert('Շնորհակալություն, մենք կկապվենք ձեզ հետ՝ ' + (data.get('email') || ''));
+        form.reset();
+      }
+    </script>
+
+    
+
+  </body>
+</html>

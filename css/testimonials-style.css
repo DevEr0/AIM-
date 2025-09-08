@@ -1,0 +1,49 @@
+/* Updated testimonials-style.css */
+.testimonials {
+  padding: 48px 0;
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.test {
+  background: #fff;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(16,16,16,0.06);
+}
+
+.stars {
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.test p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.test .author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author .dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 18px;
+color: var(--primary);
+}

@@ -1,0 +1,126 @@
+/* Updated progress-style.css */
+
+/* Progress Section */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(45deg, #f8f8f8, #ffffff);
+}
+
+.progress-text {
+  margin-bottom: 50px;
+}
+
+.progress-text h1 {
+  font-size: 2.5rem;
+  color: #5c0a15;
+}
+
+.progress-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+.progress-card {
+  text-align: center;
+  flex: 0 1 200px;
+  display: flex; /* Add flex to the card */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.progress-logo {
+  width: 200px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto; /* Center the image */
+  margin-right: auto; /* Center the image */
+}
+
+.progress-circle {
+  --progress: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#4e0d15 calc(var(--progress) * 1%), #eee 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.progress-inner-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #4e0d15;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+}
+
+.progress-description {
+  font-size: 14px;
+  color: #333;
+}
+
+.progress-description i {
+  margin-right: 5px;
+  color: #7c1d26;
+}
+
+/* Responsive Design */
+@media (max-width: 828px) {
+  .progress-cards-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .progress-card {
+    width: 100%;
+    align-items: center; /* Ensure centering on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-logo {
+    width: 150px;
+    height: 90px;
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
+  }
+
+  .progress-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .progress-inner-circle {
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+  }
+}

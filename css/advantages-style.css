@@ -1,0 +1,184 @@
+/* Updated advantages-style.css */
+
+/* Advantages Section */
+.advantages-section {
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  background-size: cover;
+}
+
+.header {
+  background-color: #590D19;
+  padding: 5rem 2rem;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantages-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.advantages-subtitle {
+  font-size: 1.2rem;
+  color: #e1bdbf;
+  margin-bottom: 3rem;
+}
+
+.advantages-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.advantage-box {
+  background-color: #590D19;
+  padding: 2.5rem 3.5rem 2.5rem 3.5rem; /* Symmetric left/right padding to center text without overlap */
+  border-radius: 2.5rem;
+  border: 2px solid white;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-width: 240px;
+  margin-top: -4rem;
+  transition: transform 0.3s ease;
+  position: relative; /* Positioning context for ::before and ::after */
+}
+
+.advantage-box:hover {
+  transform: scale(1.05);
+}
+
+.advantage-box::before {
+  content: '';
+  display: block;
+  width: 40px; /* White circle size */
+  height: 40px;
+  background: white; /* White background for the circle */
+  border-radius: 50%; /* Makes it a circle */
+  position: absolute; /* Position in upper-left corner */
+  top: 15px; /* Distance from top */
+  left: 15px; /* Distance from left */
+  background-size: 24px; /* Icon size within white circle */
+  background-position: center; /* Center the PNG */
+  background-repeat: no-repeat; /* Prevent repeating */
+  margin: 0; /* Remove default margin */
+}
+
+/* Inner circle for first advantage-box only */
+.advantage-box:nth-child(1)::after {
+  content: '';
+  display: block;
+  width: 24px; /* Smaller inner circle */
+  height: 24px;
+  background: #590D19; /* Matches advantage-box background */
+  border-radius: 50%; /* Makes it a circle */
+  position: absolute;
+  top: 23px; /* Center within 40px white circle: 15px + (40px - 24px) / 2 */
+  left: 23px; /* Center within 40px white circle */
+  background-size: 16px; /* Icon size within inner circle */
+  background-position: center; /* Center the PNG */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-image: url('../images/Vector\ 1.png') /* Placeholder for new icon */
+}
+
+.advantage-box:nth-child(1)::before {
+  background-image: url('../images/Vector\ 1.png'); /* Update to your actual PNG */
+}
+
+.advantage-box:nth-child(2)::before {
+  background-image: url('../images/Union.png');
+  background-position: center;
+}
+
+.advantage-box:nth-child(3)::before {
+  background-image: url('../images/Star 1.png');
+  background-position: center;
+}
+
+.advantage-heading {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.advantage-text {
+  font-size: 0.95rem;
+  color: #f0e6e7;
+  line-height: 1.5;
+}
+
+.advantages-quote {
+  margin-top: 3rem;
+  font-style: italic;
+  color: #e0c8c9;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .advantages-title {
+    font-size: 2rem;
+  }
+  .advantages-subtitle {
+    font-size: 1rem;
+  }
+  .header {
+    padding: 3rem 1.5rem;
+  }
+  .advantages-container {
+    padding: 30px 20px;
+  }
+  .advantage-box {
+    margin-top: 1rem;
+    max-width: 80%;
+    padding: 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .advantages-title {
+    font-size: 1.6rem;
+  }
+  .advantages-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .header {
+    padding: 2rem 1rem;
+  }
+  .advantage-box {
+    padding: 1.5rem 2rem;
+    min-width: 200px;
+  }
+  .advantage-box::before {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+    background-size: 20px;
+  }
+  .advantage-box:nth-child(1)::after {
+    width: 20px;
+    height: 20px;
+    top: 16px;
+    left: 16px;
+    background-size: 12px;
+  }
+  .advantage-heading {
+    font-size: 1.1rem;
+  }
+  .advantage-text {
+    font-size: 0.85rem;
+  }
+  .advantages-quote {
+    font-size: 0.9rem;
+  }
+}

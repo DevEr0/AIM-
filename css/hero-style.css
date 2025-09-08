@@ -1,0 +1,129 @@
+.hero {
+  height: 85vh; /* Slightly less than full screen */
+  width: 100%; /* Prevent scrollbar */
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Keep at bottom */
+  justify-content: flex-start;
+  color: #fff;
+  padding: 0 8px 24px 8px; /* Reduced left padding for closer-to-wall text */
+  box-sizing: border-box;
+}
+
+.hero .left {
+  max-width: 830px; /* Slightly larger width */
+  max-height: 400px;
+  margin: 50px; /* Keep margin tight */
+}
+
+.eyebrow {
+  color: #ffdcdc;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px; /* Increased from 12px */
+}
+
+h1 {
+  font-size: min(44px, max(28px, calc(28px + (44 - 28) * ((100vw - 480px) / (1440 - 480)))));
+  margin: 8px 0 12px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+p.lead {
+  max-width: 420px;
+  opacity: 0.95;
+  margin-bottom: 25px;
+  font-size: 17px; /* Increased from 13px */
+}
+
+.actions {
+  display: flex;
+  gap: 10px; /* Restored to original value before reduction */
+  justify-content: flex-start; /* Default to left for larger screens */
+}
+
+.btn {
+  width: 280px; /* Reduced by 15% from 233px */
+  height: 42px; /* Reduced by 15% from 50px */
+  padding: 10px 41px; /* Reduced by ~15% from 12px 36px */
+  border-radius: 16px; /* Kept as is, not size-related */
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px; /* Reduced by ~15% from 18px */
+  line-height: 100%;
+  letter-spacing: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  opacity: 1;
+  box-sizing: border-box;
+  white-space: nowrap; /* Prevent text wrapping to multiple lines */
+}
+
+.btn.white {
+  background: #fff;
+  color: var(--primary);
+}
+
+.btn.ghost {
+  width: 200px; /* Reduced by 15% from 233px */
+  color: #fff;
+  background: transparent;
+}
+
+/* Responsive adjustments for hero */
+@media (max-width: 900px) {
+  .hero {
+    height: 70vh;
+    padding: 0 15px 20px 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero .left {
+    max-width: 80%;
+    margin: 20px auto;
+    max-height: none;
+  }
+  p.lead {
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; /* Explicitly center buttons horizontally */
+    align-items: center; /* Ensure buttons are centered in the container */
+    width: 100%; /* Full width to ensure centering */
+  }
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    padding: 0 10px 15px 10px;
+  }
+  p.lead {
+    font-size: 13px;
+  }
+  .eyebrow {
+    font-size: 12px;
+  }
+  .btn {
+    max-width: 220px;
+    font-size: 13px;
+  }
+}

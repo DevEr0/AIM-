@@ -1,0 +1,79 @@
+header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand .title img {
+  height: 40px;   /* controls logo size */
+  width: auto;    /* keeps aspect ratio */
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--dark);
+  font-weight: 400;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.cta {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 900px) {
+  nav ul {
+    gap: 8px;
+  }
+  nav a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .cta {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 690px) {
+  nav ul {
+    display: none; /* Handled by toggle.css for mobile */
+  }
+}

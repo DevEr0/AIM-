@@ -1,0 +1,187 @@
+.services {
+  margin: 0 5%;
+  padding: 60px 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 70px;
+  color: var(--primary);
+}
+/* Service Blocks */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
+}
+.service {
+  text-align: left;
+  position: relative;
+  max-width: 90%; /* Reduced max-width for each service block */
+  margin: 0 auto; /* Center if needed, but keeps alignment */
+}
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  display: block; /* Ensures consistent alignment */
+}
+.service-link {
+  position: absolute;
+  bottom: 10px;
+  left: 0; /* Changed to 0 to align with left edge of h4 and p */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer; /* Make it look clickable */
+}
+.service-icon-new {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  background: none;
+  padding: 0;
+}
+.learn-more-text {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  margin-left: 0;
+  color: #590D19;
+  font-family: "Montserrat", arm;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out, max-width 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+.service-link:hover .learn-more-text {
+  opacity: 1;
+  max-width: 150px; /* Adjust as needed to fit the text content */
+  margin-left: 5px;
+}
+.service-content {
+  padding: 0 0 45px 0; /* Increased bottom padding slightly to create ~10px gap between p text and the link (accounting for p margin and link height/position) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns h4 and p to the left */
+}
+.service-content h4 {
+  color: #590D19;
+  font-family: "Montserrat", arm;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 29px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0 0 10px 0;
+}
+.service-content p {
+  font-family: Montserrat arm;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0 0 15px 0;
+}
+/* Responsive adjustments for services */
+@media (max-width: 900px) {
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 20px;
+  }
+  .services {
+      margin: 0 3%;
+      padding: 40px 0;
+  }
+  .section-title {
+      font-size: 2.2rem;
+  }
+  .service-content h4 {
+      font-size: 24px;
+  }
+  .service-content p {
+      font-size: 14px;
+  }
+  .service {
+    max-width: 95%; /* Slightly adjusted for medium screens */
+  }
+}
+@media (max-width: 600px) {
+  .services-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+  }
+  .services {
+      margin: 0 2%;
+      padding: 30px 0;
+  }
+  .section-title {
+      font-size: 1.8rem;
+  }
+  .service {
+      text-align: center;
+      max-width: 100%; /* Full width on small screens for better fit */
+      margin: 0 auto;
+  }
+  .service-icon {
+      width: 45px;
+      height: 45px;
+      display: block;
+      margin: 0 auto 10px;
+  }
+  .service-content {
+      padding-bottom: 35px; /* Adjusted for closeness on small screens */
+      align-items: center; /* Centers content on small screens */
+  }
+  .service-content h4 {
+      text-align: center;
+  }
+  .service-content p {
+      text-align: center;
+  }
+  .service-link {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5px;
+  }
+  .service-icon-new {
+      transform: rotate(90deg);
+  }
+  .learn-more-text {
+      margin-left: 5px; /* Adjust if needed after rotation */
+  }
+}
+@media (max-width: 480px) {
+  .service {
+      text-align: center;
+      max-width: 100%;
+      margin: 0 auto;
+  }
+  .service-icon {
+      display: block;
+      margin: 0 auto 10px;
+  }
+  .service-content h4 {
+      text-align: center;
+  }
+  .service-content p {
+      text-align: center;
+  }
+  .service-link {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5px;
+      display: flex;
+      justify-content: center; /* Center the icon and text horizontally */
+      align-items: center;
+  }
+  .service-icon-new {
+      transform: rotate(90deg);
+      /* Removed margin: 0 auto; as it's not needed with justify-content: center and the text space fix */
+  }
+  .learn-more-text {
+      margin-left: 5px; /* Adjust if needed after rotation */
+  }
+}

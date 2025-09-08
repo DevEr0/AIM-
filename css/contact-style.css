@@ -1,0 +1,219 @@
+/* Contact Form Section */
+.contact-form-section {
+  max-width: 800px;
+  margin: 3rem auto 3rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  color: #4e0d15;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  width: 100%;
+  text-align: left; /* Align labels and inputs to the left for consistency */
+}
+
+.form-label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #4e0d15;
+  margin-bottom: 0.5rem; /* Space between label and input */
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: 2px solid #590D19; /* Border color for input */
+  border-radius: 0.5rem;
+  background-color: #ffffff; /* Background color set to white */
+  color: #4e0d15;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.form-input:focus {
+  background-color: #f0f0f0; /* Slightly gray on focus */
+}
+
+.form-textarea {
+  width: 100%;
+  height: 150px;
+  padding: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: 2px solid #590D19; /* Border color for textarea */
+  border-radius: 0.5rem;
+  background-color: #ffffff; /* Background color set to white */
+  color: #4e0d15;
+  resize: vertical;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.form-textarea:focus {
+  background-color: #f0f0f0; /* Slightly gray on focus */
+}
+
+.submit-button {
+  width: min(304px, 90%); /* 15% smaller than 358px */
+  height: calc(min(304px, 90%) / 5.6296); /* Maintains aspect ratio (304/54 ≈ 5.6296) */
+  padding: 10px 31px; /* 15% smaller than 12px 36px */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px; /* 15% smaller than 20px */
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: #590D19; /* Button background */
+  color: #ffffff; /* Button text */
+  border: 2px solid #590D19; /* Border matches button background */
+  border-radius: 14px; /* 15% smaller than 16px */
+  opacity: 1;
+  transform: rotate(0deg);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  align-self: flex-end; /* Button aligned to the right */
+}
+
+.submit-button:hover {
+  transition: 0.5s;
+  background-color: #4e0d15; /* Slightly darker on hover */
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #e0c8c9;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .social-links {
+    align-items: center;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .form-input, .form-textarea {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .form-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .submit-button {
+    width: min(255px, 85%); /* 15% smaller than 300px */
+    height: calc(min(255px, 85%) / 5.6296); /* Maintains aspect ratio */
+    padding: 10px 31px; /* Preserve scaled padding */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px; /* 15% smaller than 18px */
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.9rem;
+  }
+
+  .social-link {
+    font-size: 0.95rem;
+  }
+
+  .logo-image {
+    max-width: 120px;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+  }
+
+  .contact-title {
+    font-size: 1.4rem;
+  }
+
+  .form-textarea {
+    height: 120px;
+  }
+
+  .submit-button {
+    width: min(212px, 80%); /* 15% smaller than 250px */
+    height: calc(min(212px, 80%) / 5.6296); /* Maintains aspect ratio */
+    padding: 10px 31px; /* Preserve scaled padding */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px; /* 15% smaller than 16px */
+    line-height: 100%;
+    letter-spacing: 0%;
+    align-self: center; /* Center button on small screens for better UX */
+  }
+}

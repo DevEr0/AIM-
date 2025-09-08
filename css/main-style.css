@@ -1,0 +1,146 @@
+:root {
+  --primary: #70121a;
+  --dark: #2a2a2a;
+  --muted: #777;
+  --bg: #f7f6f6;
+  --card: #ffffff;
+  --accent: rgba(112,18,26,0.06);
+  --max: 1200px;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.45;
+  color: var(--dark);
+  background: var(--bg);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero-specific container override */
+.hero .container {
+  margin: 0; /* Remove centering */
+  padding: 0 8px; /* Minimal padding for left alignment */
+  width: 100%; /* Ensure full width */
+}
+
+.hero {
+  height: 85vh; /* Slightly less than full screen */
+  width: 100%; /* Prevent scrollbar */
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/mnt/data/Frame 91.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Keep at bottom */
+  justify-content: flex-start;
+  color: #fff;
+  padding: 0 8px 24px 8px; /* Minimal padding */
+  box-sizing: border-box;
+}
+
+.hero .left {
+  max-width: 450px; /* Slightly larger width */
+  margin: 0; /* Keep tight */
+}
+
+.eyebrow {
+  color: #ffdcdc;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 12px; /* Increased size */
+}
+
+h1 {
+  font-size: 28px; /* Increased heading size */
+  margin: 8px 0 12px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+p.lead {
+  opacity: 0.95;
+  margin-bottom: 16px;
+  font-size: 13px; /* Increased size */
+}
+
+.actions {
+  display: flex;
+  gap: 8px; /* Smaller spacing */
+}
+
+
+
+/* Small animations */
+.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* Responsive */
+@media(max-width:1000px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prog-card .radial {
+    width: 100px;
+    height: 100px;
+  }
+  .team .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .adv-cards {
+    flex-direction: column;
+  }
+  .advantages .inner {
+    grid-template-columns: 1fr;
+  }
+  .contact .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:680px) {
+  nav ul {
+    display: none;
+  }
+  .team .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .prog-card {
+    padding: 18px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
