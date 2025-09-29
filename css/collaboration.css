@@ -1,57 +1,63 @@
 .collaboration {
-    width: 100%;
-    padding: 0px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  
-  .collaboration-content {
-    text-align: center;
-    max-width: 600px;
-    margin-bottom: 80px;
-  }
-  
-  .collaboration-text {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-  }
-  
-  .btn {
-    width: 198px;
-    height: 42px;
-    padding: 10px 31px;
-    border-radius: 16px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    box-sizing: border-box;
-  }
-  
-  .btn.white {
-    background: var(--primary) ;
-    color:  #fff;
-  }
-  
-  .btn.ghost {
-    color: none;
-    background: transparent;
-    border: none;
-  }
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.collaboration-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+
+.collaboration .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.collaboration-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn {
+  width: 198px;
+  height: 42px;
+  padding: 10px 31px;
+  border-radius: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 100%;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn.white {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: none;
+  color: #000; /* ✅ make text black */
+}

@@ -4,6 +4,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 60;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .nav {
@@ -11,7 +14,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5%;
+  box-sizing: border-box;
 }
+nav a {
+  color: var(--dark);
+  font-weight: 400;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  text-decoration: none; 
+}
+
 
 .brand {
   display: flex;
@@ -47,6 +61,11 @@ nav a {
 
 nav a:hover {
   background: rgba(0, 0, 0, 0.04);
+}
+
+.cta:hover
+{
+  background: black;
 }
 
 .cta {

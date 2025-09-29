@@ -68,9 +68,6 @@
   transition: color 0.3s;
 }
 
-.social-link:hover {
-  color: #7c1d26;
-}
 
 .social-link i {
   font-size: 1.2rem;
