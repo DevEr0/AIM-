@@ -11,11 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Close menu when a nav link is clicked
-      document.querySelectorAll('.nav-button').forEach(link => {
+      document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
           hamburger.classList.remove('active');
           navLinks.classList.remove('active');
         });
       });
     }
+
+    // Global form handling: the contact form (index) and the newsletter
+    // form (present in every page's footer) previously reloaded the page
+    // on submit because no handler was attached.
+    document.querySelectorAll('.contact-form, .footer-newsletter form').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = new FormData(form).get('email') || '';
+        alert('Շնորհակալություն, մենք կկապվենք ձեզ հետ՝ ' + email);
+        form.reset();
+      });
+    });
   });
