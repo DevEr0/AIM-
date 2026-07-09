@@ -242,20 +242,20 @@
         <p class="advantages-quote">"Հաջողությունը բերում են նրանք, ովքեր ընտրում են լավագույն լուծումները"</p>
       </section>
 
-      <section class="contact-form-section fade-in">
+      <section id="contact" class="contact-form-section fade-in">
         <h2 class="contact-title">Կապ մեզ հետ</h2>
         <form class="contact-form">
           <div class="form-group">
             <label for="name" class="form-label">Անուն Ազգանուն</label>
-            <input type="text" id="name" placeholder="Սահակ Պարթև" class="form-input" required>
+            <input type="text" id="name" name="name" placeholder="Սահակ Պարթև" class="form-input" required>
           </div>
           <div class="form-group">
             <label for="email" class="form-label">Էլ․ հասցե</label>
-            <input type="email" id="email" placeholder="Example@gmail.com" class="form-input" required>
+            <input type="email" id="email" name="email" placeholder="Example@gmail.com" class="form-input" required>
           </div>
           <div class="form-group">
             <label for="message" class="form-label">Նամակ</label>
-            <textarea id="message" placeholder="Ձեր Հաղորդագրությունը" class="form-textarea" required></textarea>
+            <textarea id="message" name="message" placeholder="Ձեր Հաղորդագրությունը" class="form-textarea" required></textarea>
           </div>
           <button type="submit" class="submit-button">Ուղարկել</button>
         </form>
@@ -276,7 +276,7 @@
         <div class="footer-newsletter">
           <h3>Եղեք տեղեկացված</h3>
           <form>
-            <input type="email" placeholder="Էլ․ հասցե" required>
+            <input type="email" name="email" placeholder="Էլ․ հասցե" required>
             <button type="submit">բաժանորդագրվել</button>
           </form>
         </div>
@@ -354,14 +354,8 @@
     
       document.querySelectorAll('.progress-card').forEach(card => progressObserver.observe(card));
     
-      // Simple form handling
-      function handleSubmit(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        alert('Շնորհակալություն, մենք կկապվենք ձեզ հետ՝ ' + (data.get('email') || ''));
-        form.reset();
-      }
+      // Contact and newsletter form submissions are handled globally in
+      // js/nav.js (loaded on every page), so no extra wiring is needed here.
     </script>
 
     
