@@ -79,6 +79,6 @@ body {
 }
 
 .service-item.active .service-content {
-  max-height: 300px; /* enough for text */
+  max-height: 800px; /* generous so long paragraphs are not clipped on mobile */
   padding-top: 15px;
 }
